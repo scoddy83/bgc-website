@@ -1,11 +1,18 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
-import WebsiteHeader from '@/components/WebsiteHeader.vue'
-import MitgliederView from './views/MitgliederView.vue';
+import { RouterView } from 'vue-router';
+import WebsiteHeader from '@/components/WebsiteHeader.vue';
 </script>
 
 <template>
-  <WebsiteHeader />>
-  <RouterView />
-  <MitgliederView />
+  <WebsiteHeader />
+
+  <Suspense>
+    <main>
+      <RouterView />
+    </main>
+
+    <template #fallback>
+      <div>Loading...</div>
+    </template>
+  </Suspense>
 </template>

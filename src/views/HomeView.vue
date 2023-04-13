@@ -3,7 +3,5 @@ import TheWelcome from '../components/TheWelcome.vue'
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <h1>Home | Wilkommen bei der BGC</h1>
 </template>
